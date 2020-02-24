@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    height: max-content;
+}
+.menubar ul{
+    list-style-type: none;
+}
+.menubar li a{
+    text-decoration: none;
+}
+.menubar li a:hover{
+    opacity: 0.7;
+}
+@media screen and (min-width: 576px){
+    body{
+        display: grid;
+        height: 100%;
+        grid-template-rows: 100px 100vh 100vh 100vh auto 100vh 100px;
+        grid-template-columns: auto;
+        grid-template-areas: "banner" "content" "content1" "content2" "content3" "content4" "footer";
+    }
+    header{
+        grid-area: banner;
+        padding: 0.5% 1%;
+    }
+    .menubar{
+        height: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .menubar img{
+        max-width: 150px;
+        max-height: 100px;
+        padding: 10px 10px;
+        flex: 1 0 auto;
+        display: block;
+        align-self: center;
+    } 
+    .menubar ul{
+        flex: 1 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .menubar li{
+        padding: 20px 10px;
+        flex: 1 0 auto;
+        display: block;
+        text-align: center;
+    }
+    .menubar li a{
+        font-size: 30px;
+        text-decoration: none;
+    }
+    .sec1{
+        background-image: linear-gradient(to left, rgba(135, 79, 255, 0.185), rgb(11, 2, 31)), url("../Assets/fruits_assort.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        grid-area: content;
+        height: 50vh;
+        color: #ffffff;
+        text-shadow: #000000 2px;
+        padding: 15% 15%;
+        justify-content: center;
+        align-items: center;
+    }
+    .sec1 .container{
+        width: 700px;
+        
+    }
+    .sec1 .tagline{
+        font-size: 40px;
+        text-transform: capitalize;
+    }
+    .sec1 .introText{
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .sec1 button{
+        margin: 5px 0px;
+        width: 180px;
+        height: 35px;
+        background-color: #159b11;
+        color: #ffffff;
+        font-size: 20px;
+        border: none;
+        border-radius: 3px;
+    }
+    .sec2{
+        background-image: linear-gradient(to left, rgba(250, 250, 250, 0.829), rgba(217, 204, 245, 0.801)), url("../Assets/pepper_splash.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        grid-area: content1;
+        height: auto;
+        padding: 10% 15%;
+        display: flex;
+        flex: 1 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    .sec2 .container{
+        width: 40%;
+        height: auto;
+    }
+    .sec2 img{
+        /* margin: 10px; */
+        width: 100%;
+        max-width: 200%;
+        height: auto;
+    }
+    .sec2 .category{
+        margin: 10px;
+        color: #159b11;
+        font-size: 40px;
+    }
+    .sec2 .aboutDetails{
+        margin: 10px;
+        font-size: 20px;
+        line-height: 22px;
+        color: #000000;
+    }
+    .sec2 button{
+        margin: 10px 10px;
+        width: 180px;
+        height: 35px;
+        background-color: #159b11;
+        color: #ffffff;
+        font-size: 20px;
+        text-transform: capitalize;
+        border: none;
+        border-radius: 3px;
+    }
+    .sec3{
+        background-image: linear-gradient(to left, rgba(135, 79, 255, 0.185), rgb(11, 2, 31)), url("../Assets/fruits_assort.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        grid-area: content2;
+        padding: 10% 15%;
+    }
+    .sec3 .special{
+        align-items: center;
+    }
+    .sec3 .category{
+        font-size: 40px;
+        text-transform: capitalize;
+        color: #159b11;
+        text-align: center;
+    }
+    .sec3 .specialDetails{
+        /* width: 50%; */
+        font-size: 20px;
+        line-height: 22px;
+        color: #ffffff;
+        text-align: center;
+    }
+    .sec3 .specialImg{
+        padding: 10px;
+        display: flex;
+        flex: 1 0 auto;
+        /* flex-wrap: wrap; */
+        justify-content: space-evenly;
+    }
+    .specialImg .w3-card{
+        margin: 10px 2px;
+        padding: 5px 5px;
+        background-color: #ffffff;
+        width: 27%;
+        text-align: center;
+        border-radius: 3px;
+    } 
+    .specialImg img{
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    } 
+    .sec4{
+        background-color: #30472f;
+        grid-area: content3;
+        padding: 2%;
+    }
+    .sec4 .category{
+        color: #159b11;
+        font-size: 40px;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    .sec4 .menuDetails{
+        color: #ffffff;
+        font-size: 20px;
+        text-align: center;
+    }
+    .sec4 .menuContainer{
+        display: flexbox;
+        flex
+    }
+    .sec4 .menuItem .foodName{
+        color: #159b11;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: underline #159b11;
+    }
+    .sec4 .menuItem .variant{
+        color: #6bc067;
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+    .sec4 .menuItem .foodExpo{
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    .sec4 .menuItem .foodDetails{
+        width: 80%;
+        font-size: 15px;
+    }
+    .sec4 .menuItem .foodPrice{
+        width: 20%;
+        font-size: 20px;
+        color: #159b11;
+    }
+    .sec5{
+        background-color: #86ad84;
+        grid-area: content4;
+    }  
+    footer{
+        grid-area: footer;
+    }
+}
+.sec1{
+    /* background-image: url("Assets/heather-ford-_U4F6pyOQRs-unsplash.jpg"); */
+    /* background-color: linear-gradient(#29274e,#29274e00); */
+}
+.sec2{
+
+}
+.sec3{
+
+}
+.sec4{
+
+}
+.sec5{
+
+}

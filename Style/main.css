@@ -7,429 +7,43 @@ body{
     height: max-content;
     font-family: 'Antic Didone', ;
 }
+
+/* Home page > header */
+body{
+    display: grid;
+    height: 100%;
+    /* grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: auto;
+    grid-template-areas: "banner" "content" "content1" "content2" "content3" "content4" "footer"; */
+}
+.menubar{
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-around;
+    text-align: center;
+}
+.menubar img{
+    width: 85px;
+    height: 20px;
+    flex: 1 0 auto;
+    display: block;
+    align-self: center;
+}
 .menubar ul{
+    background-color: #0a6575;
+    width: 100%
     list-style-type: none;
 }
+.menubar li{
+    width: 100%;
+}
 .menubar li a{
-    text-decoration: none;
+    text-decoration: none; 
 }
 .menubar li a:hover{
     opacity: 0.7;
-}
-@media screen and (min-width: 576px){
-/* Login and Signup page start for large screen */
-   *{
-       margin: 0;
-       padding: 0;
-       -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-       box-sizing: border-box;
-       font-family: 'Antic Didone';
-   }
-   body{
-       background-color: #009688;
-   }
-   #main{
-       width: 35%;
-       margin: 50px auto;
-   }
-   #tab-btn{
-       display: -webkit-flex;
-       display: -moz-flex;
-       display: -ms-flex;
-       display: -o-flex;
-       display: flex;
-       width: 100%;
-       justify-content: center;
-   }
-   .login, .register{
-       text-decoration: none;
-       display: block;
-       width: 100%;
-       background-color: #37474f;
-       text-align: center;
-       color: #ffffff;
-       font-style: 25px;
-       padding: 10px; 
-   }
-   .active{
-       background-color: #eeeeee;
-       color: #000000;
-   }
-   .content, .other{
-       width: 100%;
-       background-color: #eeeeee;
-       padding: 20px 30px 30px 30px;
-       box-shadow: 2px 2px 5px #333333;
-   }
-   .other{
-       display: none;
-   }
-   .inp{
-       width: 100%;
-       padding: 12px;
-       margin-bottom: 15px;
-       font-size: 20px;
-       border: 2px solid #888888;
-       border-bottom: 5px solid #888888;
-       background-color: #ffffff;
-       color: #666666;
-   }
-   .inp:focus{
-       outline: none;
-       border: 2px solid #555555;
-       border-bottom: 5px solid #555555;
-   }
-   #sub-btn{
-       width: 100%;
-       padding: 12px;
-       border: none;
-       font-style: 20px;
-       font-weight: bold;
-       background-color: #f44336;
-       color: #ffffff;
-       cursor: pointer;
-       border-bottom: 5px solid #444444;
-   }
-   #sub-btn:focus{
-       outline: none;
-   }
-   #sub-btn:active{
-       border: none;
-       margin-top: 5px;
-   }
-   #forgot{
-       font-size: 20px;
-       color: #444444;
-       display: block;
-   }
-   h2{
-       text-align: center;
-       padding-bottom: 15px;
-       color: #333333;
-       font-size: 30px;
-       font-variant: small-caps;
-   }
-   
-/* Login and Signup page end for large screen */
-/* Landing page start for large screen*/
-    body{
-        display: grid;
-        height: 100%;
-        grid-template-rows: 100px 100vh 100vh 100vh auto auto auto;
-        grid-template-columns: auto;
-        grid-template-areas: "banner" "content" "content1" "content2" "content3" "content4" "footer";
-    }
-    header{
-        grid-area: banner;
-        padding: 0.5% 1%;
-    }
-    .menubar{
-        height: 100px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        text-align: center;
-    }
-    .menubar img{
-        max-width: 150px;
-        max-height: 100px;
-        padding: 10px 10px;
-        flex: 1 0 auto;
-        display: block;
-        align-self: center;
-    } 
-    .menubar ul{
-        flex: 1 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        text-align: center;
-    }
-    .menubar li{
-        padding: 20px 10px;
-        flex: 1 0 auto;
-        display: block;
-        text-align: center;
-    }
-    .menubar li a{
-        font-size: 30px;
-        text-decoration: none;
-    }
-    .sec1{
-        background-image: linear-gradient(to left, rgba(135, 79, 255, 0.185), rgb(11, 2, 31)), url("../Assets/fruits_assort.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        grid-area: content;
-        height: 50vh;
-        color: #ffffff;
-        text-shadow: #000000 2px;
-        padding: 15% 15%;
-        justify-content: center;
-        align-items: center;
-    }
-    .sec1 .container{
-        width: 700px;
-        
-    }
-    .sec1 .tagline{
-        font-size: 40px;
-        text-transform: capitalize;
-    }
-    .sec1 .introText{
-        font-size: 20px;
-        line-height: 22px;
-    }
-    .sec1 button{
-        margin: 5px 0px;
-        width: 180px;
-        height: 35px;
-        background-color: #159b11;
-        color: #ffffff;
-        font-size: 20px;
-        border: none;
-        border-radius: 3px;
-    }
-    .sec2{
-        background-image: linear-gradient(to left, rgba(250, 250, 250, 0.829), rgba(217, 204, 245, 0.801)), url("../Assets/pepper_splash.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        grid-area: content1;
-        height: auto;
-        padding: 10% 15%;
-        display: flex;
-        flex: 1 0 auto;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
-    }
-    .sec2 .container{
-        width: 40%;
-        height: auto;
-    }
-    .sec2 img{
-        /* margin: 10px; */
-        width: 100%;
-        max-width: 200%;
-        height: auto;
-    }
-    .sec2 .category{
-        margin: 10px;
-        color: #159b11;
-        font-size: 40px;
-    }
-    .sec2 .aboutDetails{
-        margin: 10px;
-        font-size: 20px;
-        line-height: 22px;
-        color: #000000;
-    }
-    .sec2 button{
-        margin: 10px 10px;
-        width: 180px;
-        height: 35px;
-        background-color: #159b11;
-        color: #ffffff;
-        font-size: 20px;
-        text-transform: capitalize;
-        border: none;
-        border-radius: 3px;
-    }
-    .sec3{
-        background-image: linear-gradient(to left, rgba(135, 79, 255, 0.185), rgb(11, 2, 31)), url("../Assets/fruits_assort.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        grid-area: content2;
-        padding: 10% 15%;
-    }
-    .sec3 .special{
-        align-items: center;
-    }
-    .sec3 .category{
-        font-size: 40px;
-        text-transform: capitalize;
-        color: #159b11;
-        text-align: center;
-    }
-    .sec3 .specialDetails{
-        /* width: 50%; */
-        font-size: 20px;
-        line-height: 22px;
-        color: #ffffff;
-        text-align: center;
-    }
-    .sec3 .specialImg{
-        padding: 10px;
-        display: flex;
-        flex: 1 0 auto;
-        /* flex-wrap: wrap; */
-        justify-content: space-evenly;
-    }
-    .specialImg .w3-card{
-        margin: 10px 2px;
-        padding: 5px 5px;
-        background-color: #ffffff;
-        width: 27%;
-        text-align: center;
-        border-radius: 3px;
-    } 
-    .specialImg img{
-        width: 100%;
-        max-width: 450px;
-        height: auto;
-    } 
-    .sec4{
-        background-image: linear-gradient(to left, rgba(250, 250, 250, 0.829), rgba(217, 204, 245, 0.801)), url("../Assets/pepper_splash.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        height: auto;
-        justify-content: center;
-        align-content: center;
-        grid-area: content3;
-        margin: 0;
-    }
-    .sec4 .menu{
-        margin: 5%;
-    }
-    .sec4 .category{
-        color: #159b11;
-        font-size: 40px;
-        text-transform: capitalize;
-        text-align: center;
-    }
-    .sec4 .menuDetails{
-        color: #ffffff;
-        font-size: 20px;
-        text-align: center;
-    }
-    .sec4 .menuContainer{
-        display: grid;
-        grid-template-columns: 40% 40%;
-        grid-template-rows: auto auto;
-        justify-content: space-around;
-    }
-    .sec4 .menuItem{
-        margin: 2%;
-    }
-    .sec4 .menuItem .foodName{
-        color: #159b11;
-        font-size: 18px;
-        text-transform: uppercase;
-        text-decoration: underline #159b11;
-    }
-    .sec4 .menuItem .variant{
-        color: #6bc067;
-        font-size: 10px;
-        text-transform: uppercase;
-    }
-    .sec4 .menuItem .foodExpo{
-        display: inline-flex;
-        justify-content: space-between;
-    }
-    .sec4 .menuItem .foodDetails{
-        width: 80%;
-        font-size: 15px;
-    }
-    .sec4 .menuItem .foodPrice{
-        width: 20%;
-        font-size: 20px;
-        color: #159b11;
-    }
-    .sec4 button{
-        text-align: center;
-        margin: 10px 10px;
-        width: 180px;
-        height: 35px;
-        background-color: #159b11;
-        color: #ffffff;
-        font-size: 20px;
-        text-transform: capitalize;
-        border: none;
-        border-radius: 3px;
-
-    }
-    .sec5{
-        background-image: linear-gradient(to left, rgba(135, 79, 255, 0.185), rgb(11, 2, 31)), url("../Assets/fruits_assort.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        grid-area: content4;
-        height: auto;
-        justify-content: center;
-        padding: 5%;
-    }
-    .sec5 .sectionBanner{
-        text-align: center;
-        margin: 2%;
-    }
-    .sec5 .sectionBanner h2{
-        color: #159b11;
-        font-size: 40px;
-    }
-    .sec5 .sectionBanner h3{
-        color: #ffffff;
-        font-size: 20px;
-    }
-    .sec5 form{
-        /* width: 80%; */
-        /* justify-content: space-around; */
-    }
-    .sec5 .formgroup{
-        display: inline-block;
-        margin: 30px;
-        width: 250px;
-        height: 60px;
-    }
-    .sec5 .formgroup label{
-        font-size: 20px;
-        color: #159b11;
-    }
-    .sec5 .formgroup input{
-        width: 250px;
-        height: 40px;
-        padding: 5px;
-        border-radius: 3px;   
-    }
-    .sec5 .formgroup input[placeholder]{
-        font-size: 20px;
-    }
-    .sec5 .formgroup input:focus{
-        border: 3px solid #159b11;
-        border-radius: 3px;
-        padding: 10px;   
-    }
-    .sec5 form button{
-        margin: 10px 10px;
-        width: 180px;
-        height: 35px;
-        background-color: #159b11;
-        color: #ffffff;
-        font-size: 20px;
-        text-transform: capitalize;
-        border: none;
-        border-radius: 3px;
-    }
-    footer{
-        background-color: #6bc067;
-        grid-area: footer;
-    }
-    footer .copy{
-        font-size: 18px;
-        font-weight: 800;
-    }
-    footer .fa{
-        color: #159b11;
-    }
-   /* Landing page end for large screen */
 }
 .sec1{
     /* background-image: url("Assets/heather-ford-_U4F6pyOQRs-unsplash.jpg"); */
@@ -447,3 +61,472 @@ body{
 .sec5{
 
 }
+/* MEDIA QUERIES Start*/
+@media screen and (min-width: 576px){
+    /* Login and Signup page start for large screen */
+       *{
+           margin: 0;
+           padding: 0;
+           -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+           box-sizing: border-box;
+           font-family: 'Antic Didone';
+       }
+       body{
+           background-color: #009688;
+       }
+       #main{
+           width: 35%;
+           margin: 50px auto;
+       }
+       #tab-btn{
+           display: -webkit-flex;
+           display: -moz-flex;
+           display: -ms-flex;
+           display: -o-flex;
+           display: flex;
+           width: 100%;
+           justify-content: center;
+       }
+       .login, .register{
+           text-decoration: none;
+           display: block;
+           width: 100%;
+           background-color: #37474f;
+           text-align: center;
+           color: #ffffff;
+           font-style: 25px;
+           padding: 10px; 
+       }
+       .active{
+           background-color: #eeeeee;
+           color: #000000;
+       }
+       .content, .other{
+           width: 100%;
+           background-color: #eeeeee;
+           padding: 20px 30px 30px 30px;
+           box-shadow: 2px 2px 5px #333333;
+       }
+       .other{
+           display: none;
+       }
+       .inp{
+           width: 100%;
+           padding: 12px;
+           margin-bottom: 15px;
+           font-size: 20px;
+           border: 2px solid #888888;
+           border-bottom: 5px solid #888888;
+           background-color: #ffffff;
+           color: #666666;
+       }
+       .inp:focus{
+           outline: none;
+           border: 2px solid #555555;
+           border-bottom: 5px solid #555555;
+       }
+       #sub-btn{
+           width: 100%;
+           padding: 12px;
+           border: none;
+           font-style: 20px;
+           font-weight: bold;
+           background-color: #f44336;
+           color: #ffffff;
+           cursor: pointer;
+           border-bottom: 5px solid #444444;
+       }
+       #sub-btn:focus{
+           outline: none;
+       }
+       #sub-btn:active{
+           border: none;
+           margin-top: 5px;
+       }
+       #forgot{
+           font-size: 20px;
+           color: #444444;
+           display: block;
+       }
+       h2{
+           text-align: center;
+           padding-bottom: 15px;
+           color: #333333;
+           font-size: 30px;
+           font-variant: small-caps;
+       }
+       
+    /* Login and Signup page end for large screen */
+    
+    /* User landing page start for large screen*/
+        body{
+            display: grid;
+            height: 100%;
+            grid-template-rows: 100px 100vh 100vh 100vh auto auto auto;
+            grid-template-columns: auto;
+            grid-template-areas: "banner" "content" "content1" "content2" "content3" "content4" "footer";
+        }
+        header{
+            grid-area: banner;
+            padding: 0.5% 1%;
+        }
+        .menubar{
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .menubar img{
+            max-width: 150px;
+            max-height: 100px;
+            padding: 10px 10px;
+            flex: 1 0 auto;
+            display: block;
+            align-self: center;
+        } 
+        .menubar ul{
+            flex: 1 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .menubar li{
+            padding: 20px 10px;
+            flex: 1 0 auto;
+            display: block;
+            text-align: center;
+        }
+        .menubar li a{
+            font-size: 30px;
+            text-decoration: none;
+        }
+        .sec1{
+            background-image: linear-gradient(to left, rgba(135, 79, 255, 0.185), rgb(11, 2, 31)), url("../Assets/fruits_assort.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            grid-area: content;
+            height: 50vh;
+            color: #ffffff;
+            text-shadow: #000000 2px;
+            padding: 15% 15%;
+            justify-content: center;
+            align-items: center;
+        }
+        .sec1 .container{
+            width: 700px;
+            
+        }
+        .sec1 .tagline{
+            font-size: 40px;
+            text-transform: capitalize;
+        }
+        .sec1 .introText{
+            font-size: 20px;
+            line-height: 22px;
+        }
+        .sec1 button{
+            margin: 5px 0px;
+            width: 180px;
+            height: 35px;
+            background-color: #159b11;
+            color: #ffffff;
+            font-size: 20px;
+            border: none;
+            border-radius: 3px;
+        }
+        .sec2{
+            background-image: linear-gradient(to left, rgba(250, 250, 250, 0.829), rgba(217, 204, 245, 0.801)), url("../Assets/pepper_splash.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            grid-area: content1;
+            height: auto;
+            padding: 10% 15%;
+            display: flex;
+            flex: 1 0 auto;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+        .sec2 .container{
+            width: 40%;
+            height: auto;
+        }
+        .sec2 img{
+            /* margin: 10px; */
+            width: 100%;
+            max-width: 200%;
+            height: auto;
+        }
+        .sec2 .category{
+            margin: 10px;
+            color: #159b11;
+            font-size: 40px;
+        }
+        .sec2 .aboutDetails{
+            margin: 10px;
+            font-size: 20px;
+            line-height: 22px;
+            color: #000000;
+        }
+        .sec2 button{
+            margin: 10px 10px;
+            width: 180px;
+            height: 35px;
+            background-color: #159b11;
+            color: #ffffff;
+            font-size: 20px;
+            text-transform: capitalize;
+            border: none;
+            border-radius: 3px;
+        }
+        .sec3{
+            background-image: linear-gradient(to left, rgba(135, 79, 255, 0.185), rgb(11, 2, 31)), url("../Assets/fruits_assort.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            grid-area: content2;
+            padding: 10% 15%;
+        }
+        .sec3 .special{
+            align-items: center;
+        }
+        .sec3 .category{
+            font-size: 40px;
+            text-transform: capitalize;
+            color: #159b11;
+            text-align: center;
+        }
+        .sec3 .specialDetails{
+            /* width: 50%; */
+            font-size: 20px;
+            line-height: 22px;
+            color: #ffffff;
+            text-align: center;
+        }
+        .sec3 .specialImg{
+            padding: 10px;
+            display: flex;
+            flex: 1 0 auto;
+            /* flex-wrap: wrap; */
+            justify-content: space-evenly;
+        }
+        .specialImg .w3-card{
+            margin: 10px 2px;
+            padding: 5px 5px;
+            background-color: #ffffff;
+            width: 27%;
+            text-align: center;
+            border-radius: 3px;
+        } 
+        .specialImg img{
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+        } 
+        .sec4{
+            background-image: linear-gradient(to left, rgba(250, 250, 250, 0.829), rgba(217, 204, 245, 0.801)), url("../Assets/pepper_splash.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: auto;
+            justify-content: center;
+            align-content: center;
+            grid-area: content3;
+            margin: 0;
+        }
+        .sec4 .menu{
+            margin: 5%;
+        }
+        .sec4 .category{
+            color: #159b11;
+            font-size: 40px;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        .sec4 .menuDetails{
+            color: #ffffff;
+            font-size: 20px;
+            text-align: center;
+        }
+        .sec4 .menuContainer{
+            display: grid;
+            grid-template-columns: 40% 40%;
+            grid-template-rows: auto auto;
+            justify-content: space-around;
+        }
+        .sec4 .menuItem{
+            margin: 2%;
+        }
+        .sec4 .menuItem .foodName{
+            color: #159b11;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-decoration: underline #159b11;
+        }
+        .sec4 .menuItem .variant{
+            color: #6bc067;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+        .sec4 .menuItem .foodExpo{
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        .sec4 .menuItem .foodDetails{
+            width: 80%;
+            font-size: 15px;
+        }
+        .sec4 .menuItem .foodPrice{
+            width: 20%;
+            font-size: 20px;
+            color: #159b11;
+        }
+        .sec4 button{
+            text-align: center;
+            margin: 10px 10px;
+            width: 180px;
+            height: 35px;
+            background-color: #159b11;
+            color: #ffffff;
+            font-size: 20px;
+            text-transform: capitalize;
+            border: none;
+            border-radius: 3px;
+    
+        }
+        .sec5{
+            background-image: linear-gradient(to left, rgba(135, 79, 255, 0.185), rgb(11, 2, 31)), url("../Assets/fruits_assort.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            grid-area: content4;
+            height: auto;
+            justify-content: center;
+            padding: 5%;
+        }
+        .sec5 .sectionBanner{
+            text-align: center;
+            margin: 2%;
+        }
+        .sec5 .sectionBanner h2{
+            color: #159b11;
+            font-size: 40px;
+        }
+        .sec5 .sectionBanner h3{
+            color: #ffffff;
+            font-size: 20px;
+        }
+        .sec5 form{
+            /* width: 80%; */
+            /* justify-content: space-around; */
+        }
+        .sec5 .formgroup{
+            display: inline-block;
+            margin: 30px;
+            width: 250px;
+            height: 60px;
+        }
+        .sec5 .formgroup label{
+            font-size: 20px;
+            color: #159b11;
+        }
+        .sec5 .formgroup input{
+            width: 250px;
+            height: 40px;
+            padding: 5px;
+            border-radius: 3px;   
+        }
+        .sec5 .formgroup input[placeholder]{
+            font-size: 20px;
+        }
+        .sec5 .formgroup input:focus{
+            border: 3px solid #159b11;
+            border-radius: 3px;
+            padding: 10px;   
+        }
+        .sec5 form button{
+            margin: 10px 10px;
+            width: 180px;
+            height: 35px;
+            background-color: #159b11;
+            color: #ffffff;
+            font-size: 20px;
+            text-transform: capitalize;
+            border: none;
+            border-radius: 3px;
+        }
+        footer{
+            background-color: #6bc067;
+            grid-area: footer;
+        }
+        footer .copy{
+            font-size: 18px;
+            font-weight: 800;
+        }
+        footer .fa{
+            color: #159b11;
+        }
+       /* End of user landing page for large screen */
+    
+       /* Start of caterer dashboard for large screen */
+       .catererHeader{
+            height: 100px;
+        }
+        .caterer{
+            grid-area: content;
+            background-image: linear-gradient(to left, rgba(135, 79, 255, 0.185), rgb(11, 2, 31)), url("../Assets/fruits_assort.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: 10% 15%;
+        }
+        .caterer .special{
+            align-items: center;
+        }
+        .caterer .category{
+            font-size: 40px;
+            text-transform: capitalize;
+            color: #159b11;
+            text-align: center;
+        }
+        .caterer .specialDetails{
+            /* width: 50%; */
+            font-size: 20px;
+            line-height: 22px;
+            color: #ffffff;
+            text-align: center;
+        }
+        .caterer .specialImg{
+            padding: 10px;
+            display: flex;
+            flex: 1 0 auto;
+            /* flex-wrap: wrap; */
+            justify-content: space-evenly;
+        }
+        .caterer .specialImg .w3-card{
+            margin: 10px 2px;
+            padding: 5px 5px;
+            background-color: #ffffff;
+            width: 27%;
+            text-align: center;
+            border-radius: 3px;
+        } 
+        .caterer .specialImg img{
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+        } 
+       /* End of caterer dashboard for large screen */
+}
+/* MEDIA QUERIES end */

@@ -9,12 +9,12 @@
     <title>Signup/Login</title>
 </head>
 <body>
-    <div id="main">
-        <div id="tab-btn">
-            <a href="#" class="login active">Log In</a>
-            <a href="#" class="register">Create an account</a>
+    <div id="main" class="tabs">
+        <div id="tab-btn" class="tabs__sidebar">
+            <button class="login tabs__button" data-for-tab="1">Log In</button>
+            <button class="register tabs__button" data-for-tab="2">Create an account</button>
         </div>
-        <div class="content">
+        <div class="tabs__content" data-tab="1">
             <h2>Get Started!</h2>
             <form action="#" method="post" id="login-box">
                 <input type="text" name="username" class="inp" placeholder="Email or Phone number" required autofocus><br>
@@ -23,7 +23,7 @@
                 <input type="submit" name="submit" value="SIGN IN" id="sub-btn"> 
             </form>
         </div>
-        <div class="other">
+        <div class="tabs__content" data-tab="2">
             <h2>Create your account</h2>
             <form action="#" method="post" id="reg-box">
                 <input type="text" name="username" placeholder="Enter Username" class="inp" required autofocus><br>
@@ -35,6 +35,5 @@
         </div>
     </div>
 </body>
-<script type="script/javascript" src="Script/jquery-3.4.1.min.js"></script>
-<script type="script/javascript" src="Script/main.js"></script>
-</html>
+<script src="Script/main.js"></script>
+</html> 

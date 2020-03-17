@@ -23,7 +23,7 @@ body{
     width: 100%;
     justify-content: center;
 }
-.login, .register{
+.tabs__button{
     text-decoration: none;
     display: block;
     width: 100%;
@@ -31,20 +31,22 @@ body{
     text-align: center;
     color: #ffffff;
     font-style: 25px;
-    padding: 10px; 
+    padding: 10px;
+    border: none;
 }
-.active{
+.tabs__button--active{
     background-color: #eeeeee;
     color: #000000;
 }
-.content, .other{
+.tabs__content{
     width: 100%;
     background-color: #e8a3f1;
     padding: 20px 30px 30px 30px;
     box-shadow: 2px 2px 5px #333333;
-}
-.other{
     display: none;
+}
+.tabs__content--active{
+    display: block;
 }
 .inp{
     width: 100%;
@@ -123,7 +125,7 @@ body{
     width: 100%;
     justify-content: center;
 }
-.login, .register{
+.tabs__button{
     text-decoration: none;
     display: block;
     width: 100%;
@@ -131,20 +133,22 @@ body{
     text-align: center;
     color: #ffffff;
     font-style: 25px;
-    padding: 10px; 
+    padding: 10px;
+    border: none;
 }
-.active{
+.tabs__button--active{
     background-color: #eeeeee;
     color: #000000;
 }
-.content, .other{
+.tabs__content{
     width: 100%;
     background-color: #e8a3f1;
     padding: 20px 30px 30px 30px;
     box-shadow: 2px 2px 5px #333333;
-}
-.other{
     display: none;
+}
+.tabs__content--active{
+    display: block;
 }
 .inp{
     width: 100%;

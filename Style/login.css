@@ -173,8 +173,9 @@ h2{
     color: #333333;
     font-size: 30px;
     font-variant: small-caps;
+}
 
-}.tabs__button{
+.tabs__button{
     text-decoration: none;
     display: block;
     width: 100%;
